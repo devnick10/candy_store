@@ -5,8 +5,7 @@ import { ArrowRight } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <div>
-        <section className="relative mt-16 flex min-h-[90vh] items-center bg-gradient-to-b from-pink-50 to-rose-100 pt-8">
+        <section className="w-full  relative mt-16 flex min-h-[90vh] items-center bg-gradient-to-b from-pink-50 to-rose-100 pt-8">
                 <div className="absolute right-0 top-0 -z-10 h-full w-1/2 bg-[url('/fruit-pattern.png')] bg-cover bg-center opacity-15 md:block"></div>
                 <div className="container mx-auto grid gap-8 px-4 md:grid-cols-2">
                     <div className="flex flex-col justify-center">
@@ -60,6 +59,5 @@ export default function Hero() {
 
                 </div>
             </section>
-    </div>
   )
 }

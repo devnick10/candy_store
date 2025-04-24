@@ -4,7 +4,6 @@ import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
 
 export const Contactus = () => {
   return (
-    <div>
                     <section id="contact" className="py-24 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="mb-16 text-center">
@@ -132,6 +131,5 @@ export const Contactus = () => {
                     </div>
                 </div>
             </section>
-    </div>
   )
 }

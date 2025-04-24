@@ -3,7 +3,6 @@ import React from 'react'
 
 function Testimonials() {
   return (
-    <div>
                     <section className="bg-rose-900 py-24 text-white">
                 <div className="container mx-auto px-4">
                     <div className="mx-auto max-w-3xl text-center">
@@ -44,7 +43,6 @@ function Testimonials() {
                     </div>
                 </div>
             </section>
-    </div>
   )
 }
 

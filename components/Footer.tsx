@@ -4,7 +4,6 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div>
             <footer className="bg-rose-900 py-12 text-white">
                 <div className="container mx-auto px-4">
                     <div className="grid gap-8 md:grid-cols-4">
@@ -92,7 +91,6 @@ function Footer() {
                     </div>
                 </div>
             </footer>
-        </div>
     )
 }
 

@@ -11,7 +11,7 @@ import Footer from "./Footer"
 
 export default function Home() {
     return (
-        <div className="flex min-h-screen flex-col bg-pink-50">
+        <div className="overflow-hidden flex min-h-screen flex-col bg-pink-50">
             {/* Navigation */}
             <Navbar />
 

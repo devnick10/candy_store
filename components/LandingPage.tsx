@@ -17,10 +17,27 @@ export default function Home() {
 
             {/* Hero Section */}
             <Hero />
-
+            <section className="block mt-4 mb-[-24] sm:hidden w-full ">
+                    <div className="relative block  md:hidden">
+                        <div className="absolute -left-20 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-fuchsia-400/20"></div>
+                        <div className="absolute -right-10 top-20 h-40 w-40 rounded-full bg-rose-400/10"></div>
+                        <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl border-8 border-white shadow-2xl">
+                            <div className="relative flex justify-center items-center h-full w-full pt-8">
+                                <Image
+                                    src="/hero-image.png"
+                                    alt="Colorful fruity candies"
+                                    height={2000}
+                                    width={2000}
+                                    className="object-cover "
+                                    priority
+                                />
+                            </div>
+                        </div>
+                </div>
+            </section>
             {/* Featured Products */}
             <section id="products" className="py-24 bg-white">
-                <div className="container mx-auto px-4">
+                <div className="w-full mx-auto px-4">
                     <div className="mb-16 text-center">
                         <span className="mb-2 inline-block rounded-full bg-rose-200 px-4 py-1 text-xs font-semibold text-rose-800">
                             OUR FLAVORS
@@ -69,7 +86,7 @@ export default function Home() {
             <section id="about" className="relative overflow-hidden bg-rose-100 py-24">
                 <div className="absolute -left-32 -top-32 h-64 w-64 rounded-full bg-fuchsia-400/20"></div>
                 <div className="absolute -bottom-32 -right-32 h-64 w-64 rounded-full bg-rose-400/10"></div>
-                <div className="container relative mx-auto px-4">
+                <div className="w-full relative mx-auto px-4">
                     <div className="grid gap-12 md:grid-cols-2">
                         <div className="relative">
                             <div className="absolute -left-4 -top-4 h-full w-full rounded-2xl border-2 border-fuchsia-600"></div>
@@ -106,11 +123,12 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+
             </section>
 
             {/* Features */}
             <section id="features" className="py-24 bg-white">
-                <div className="container mx-auto px-4">
+                <div className="w-full mx-auto px-4">
                     <div className="mb-16 text-center">
                         <span className="mb-2 inline-block rounded-full bg-rose-200 px-4 py-1 text-xs font-semibold text-rose-800">
                             WHY WE&apos;RE SPECIAL
@@ -120,7 +138,6 @@ export default function Home() {
                         </h2>
                         <div className="mx-auto mt-4 h-1 w-20 bg-fuchsia-600"></div>
                     </div>
-
                     <div className="grid gap-8 md:grid-cols-3">
                         {features.map((feature, index) => (
                             <div
@@ -135,6 +152,7 @@ export default function Home() {
                                 <p className="text-rose-900/70">{feature.description}</p>
                             </div>
                         ))}
+
                     </div>
                 </div>
             </section>

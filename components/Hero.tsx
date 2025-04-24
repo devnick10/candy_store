@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react'
 export default function Hero() {
   return (
         <section className="w-full  relative mt-16 flex min-h-[90vh] items-center bg-gradient-to-b from-pink-50 to-rose-100 pt-8">
-                <div className="absolute right-0 top-0 -z-10 h-full w-1/2 bg-[url('/fruit-pattern.png')] bg-cover bg-center opacity-15 md:block"></div>
+                <div className="absolute right-0 top-0 -z-10 h-full w-1/2 bg-[url('/candy-pattern.png')] bg-cover bg-center opacity-15 md:block"></div>
                 <div className="container mx-auto grid gap-8 px-4 md:grid-cols-2">
                     <div className="flex flex-col justify-center">
                         <div className="mb-2 inline-block rounded-full bg-rose-200 px-4 py-1 text-xs font-semibold text-rose-800">

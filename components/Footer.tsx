@@ -8,7 +8,8 @@ function Footer() {
                 <div className="container mx-auto px-4">
                     <div className="grid gap-8 md:grid-cols-4">
                         <div>
-                            <h3 className="mb-4 font-serif text-2xl font-bold">Juicy Candy Co.</h3>
+                            <h3 className="mb-1 font-serif text-2xl font-bold">Ashoka</h3>
+                            <h3 className="mb-4 font-serif text-xl font-bold">Rani Agro Food Industry</h3>
                             <p className="mb-4 text-white/70">Happiness in every bite!</p>
                             <p className="text-white/70">
                                 Making the world sweeter one fruity candy at a time. Natural flavors, vibrant colors, pure joy.

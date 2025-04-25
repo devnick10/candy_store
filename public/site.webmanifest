@@ -1,0 +1,23 @@
+{
+    "name": "Rani Agro Food Industry",
+    "short_name": "Rani Agro",
+    "description": "Premium Fruit Product Manufacturers since 1995",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#e11d48",
+    "icons": [
+      {
+        "src": "/icon.ico",
+        "sizes": "192x192",
+        "type": "image/ico",
+        "purpose": "any"
+      }
+    ],
+    "related_applications": [
+      {
+        "platform": "webapp",
+        "url": "https://www.raniagrofood.com/manifest.json"
+      }
+    ]
+  }

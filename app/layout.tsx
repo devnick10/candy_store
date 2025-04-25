@@ -2,13 +2,21 @@ import type React from "react"
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
+import type { Metadata } from "next"
+import { data } from "@/lib/metadata"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
-  title: "Ashoka - Quality You Can Trust",
-  description: "Premium quality agricultural products and food items from Ashoka",
-}
+export const metadata: Metadata = {
+  ...data,
+  robots: {
+    ...data.robots,
+    googleBot: {
+      ...data.robots.googleBot,
+      "max-image-preview": "large", 
+    },
+  },
+};
 
 export default function RootLayout({
   children,
@@ -18,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider 
+        <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem

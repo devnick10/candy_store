@@ -54,7 +54,4 @@ export const data = {
     alternates: {
       canonical: "/",
     },
-    verification: {
-      google: "your-google-verification-code", 
-    },
   }

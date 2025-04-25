@@ -88,7 +88,7 @@ function Footer() {
                         </div>
                     </div>
                     <div className="mt-12 border-t border-white/20 pt-6 text-center">
-                        <p className="text-white/70">&copy; {new Date().getFullYear()} Juicy Candy Co. All rights reserved.</p>
+                        <p className="text-white/70">&copy; {new Date().getFullYear()} Rani Agro Food Industry. All rights reserved.</p>
                     </div>
                 </div>
             </footer>

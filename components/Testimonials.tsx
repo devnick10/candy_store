@@ -10,8 +10,8 @@ function Testimonials() {
                         SWEET REVIEWS
                     </span>
                     <h2 className="mb-12 font-serif text-3xl font-bold md:text-4xl">What Candy Lovers Say</h2>
-                    <div className='flex gap-4'>
-                        <div className="relative rounded-2xl bg-rose-800 p-8 shadow-2xl">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8">
+                        <div className=" relative rounded-2xl bg-rose-800 p-8 shadow-2xl">
                             <svg
                                 className="absolute -left-4 -top-4 h-12 w-12 text-fuchsia-400"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ function Testimonials() {
                                 </div>
                             </div>
                         </div>
-                        <div className="relative rounded-2xl bg-rose-800 p-8 shadow-2xl">
+                        <div className=" relative rounded-2xl bg-rose-800 p-8 shadow-2xl">
                             <svg
                                 className="absolute -left-4 -top-4 h-12 w-12 text-fuchsia-400"
                                 xmlns="http://www.w3.org/2000/svg"

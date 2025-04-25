@@ -47,7 +47,7 @@ export const data = {
       },
     },
     icons: {
-      icon: "/icon.ico",
+      icon: "/favicon.ico",
     },
     manifest: "/site.webmanifest",
     metadataBase: new URL("https://www.raniagrofood.com"),

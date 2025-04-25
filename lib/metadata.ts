@@ -1,9 +1,9 @@
 export const data = {
     title: {
-      default: "Rani Agro Food Industry | Premium Fruit Products",
+      default: "Premium Fruit candy Products | Rani Agro Food Industry",
       template: "%s | Rani Agro Food"
     },
-    description: "Manufacturers of natural fruit products including Tutti-Fruity, Karonda Cherry, Mahua Concentrate & fruit pulps. ISO-certified quality since 1995.",
+    description: "Manufacturers of natural fruit products including Tutti-Fruity, Karonda Cherry, Mahua Concentrate & fruit pulps. ISO-certified quality since 1995",
     keywords: [
       "tutti-fruity manufacturer",
       "karonda cherry supplier",

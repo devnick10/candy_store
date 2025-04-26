@@ -109,9 +109,9 @@ export const Navbar = () => {
                         >
                             Contact
                         </Link>
-                        <Button className="w-full bg-fuchsia-600 text-white hover:bg-rose-700 mt-2">
+                        {/* <Button className="w-full bg-fuchsia-600 text-white hover:bg-rose-700 mt-2">
                             Order Now
-                        </Button>
+                        </Button> */}
                     </div>
                 </div>
             )}

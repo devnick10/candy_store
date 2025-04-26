@@ -2,7 +2,7 @@ export default function robots() {
   return {
     rules: {
       userAgent: '*',
-      allow: '/', 
+      allow: ['/', '/favicon.ico'],
       disallow: [
         '/private/',
         '/admin/',
@@ -11,7 +11,7 @@ export default function robots() {
         '/test/'
       ],
     },
-    sitemap: 'https://www.raniagrofood.com/sitemap.xml', 
+    sitemap: 'https://www.raniagrofood.com/sitemap.xml',
     host: 'https://www.raniagrofood.com'
   }
 }

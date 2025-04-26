@@ -24,7 +24,7 @@ export const data = {
       siteName: "Rani Agro Food Industry",
       images: [
         {
-          url: "https://www.raniagrofood.com/ashoka.jpg",
+          url: "/icon.jpg",
           width: 1200,
           height: 630,
           alt: "Rani Agro Food product showcase",

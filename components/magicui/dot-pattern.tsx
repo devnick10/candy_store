@@ -63,7 +63,9 @@ interface DotPatternProps extends React.SVGProps<SVGSVGElement> {
 export function DotPattern({
   width = 16,
   height = 16,
+  // @typescript-eslint/no-unused-vars
   x = 0,
+  //  @typescript-eslint/no-unused-vars
   y = 0,
   cx = 1,
   cy = 1,
@@ -123,6 +125,7 @@ export function DotPattern({
           <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
         </radialGradient>
       </defs>
+      {/* @typescript-eslint/no-unused-vars */}
       {dots.map((dot, index) => (
         <motion.circle
           key={`${dot.x}-${dot.y}`}

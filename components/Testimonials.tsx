@@ -6,7 +6,7 @@ export default function Testimonials() {
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-amber-600 mb-4">Testimonials</h2>
                     <div className="w-24 h-1 bg-amber-500 mx-auto mb-8 rounded-full"></div>
-                    <p className="text-lg text-neutral-700 max-w-3xl mx-auto">What our happy customers say about Ashoka's fruity candies.</p>
+                    <p className="text-lg text-neutral-700 max-w-3xl mx-auto">What our happy customers say about Ashoka&apos;s fruity candies.</p>
                 </div>
 
                 {/* Testimonial Cards Slider */}
@@ -46,7 +46,7 @@ export default function Testimonials() {
                                         </svg>
                                     </div>
                                     <blockquote className="text-neutral-700 mb-6 flex-grow">
-                                        <p>"Ashoka candies are consistently our top-selling brand. Customers specifically ask for them by name and keep coming back for more. The mango and strawberry flavors are particularly popular."</p>
+                                        <p>&quot;Ashoka candies are consistently our top-selling brand. Customers specifically ask for them by name and keep coming back for more. The mango and strawberry flavors are particularly popular.&quot;</p>
                                     </blockquote>
                                     <div className="text-amber-500 text-sm font-medium">Partnered since 2015</div>
                                 </div>
@@ -84,7 +84,7 @@ export default function Testimonials() {
                                         </svg>
                                     </div>
                                     <blockquote className="text-neutral-700 mb-6 flex-grow">
-                                        <p>"As a mom, I'm always careful about what my kids eat. I love that Ashoka candies use natural fruit flavors. My children adore the taste, and I appreciate the quality ingredients."</p>
+                                        <p>&quot;As a mom, I&apos;m always careful about what my kids eat. I love that Ashoka candies use natural fruit flavors. My children adore the taste, and I appreciate the quality ingredients.&quot;</p>
                                     </blockquote>
                                     <div className="text-amber-500 text-sm font-medium">Loyal customer for 3 years</div>
                                 </div>
@@ -122,7 +122,7 @@ export default function Testimonials() {
                                         </svg>
                                     </div>
                                     <blockquote className="text-neutral-700 mb-6 flex-grow">
-                                        <p>"The customized packaging options from Ashoka make their candies perfect for weddings and corporate events. Guests always comment on the beautiful presentation and delicious flavors."</p>
+                                        <p>&quot;The customized packaging options from Ashoka make their candies perfect for weddings and corporate events. Guests always comment on the beautiful presentation and delicious flavors.&quot;</p>
                                     </blockquote>
                                     <div className="text-amber-500 text-sm font-medium">Featured at over 100 events</div>
                                 </div>
@@ -160,7 +160,7 @@ export default function Testimonials() {
                                         </svg>
                                     </div>
                                     <blockquote className="text-neutral-700 mb-6 flex-grow">
-                                        <p>"I use Ashoka candies in my dessert creations, and they bring a wonderful flavor dimension. The consistent quality and pure fruit taste make them perfect for professional culinary use."</p>
+                                        <p>&quot;I use Ashoka candies in my dessert creations, and they bring a wonderful flavor dimension. The consistent quality and pure fruit taste make them perfect for professional culinary use.&quot;</p>
                                     </blockquote>
                                     <div className="text-amber-500 text-sm font-medium">Featured in award-winning desserts</div>
                                 </div>
@@ -198,7 +198,7 @@ export default function Testimonials() {
                                         </svg>
                                     </div>
                                     <blockquote className="text-neutral-700 mb-6 flex-grow">
-                                        <p>"Ashoka's candies have been a tremendous success in international markets. The authentic Indian fruit flavors, especially mango and lychee, are extremely popular in Europe and the Middle East."</p>
+                                        <p>&quot;Ashoka&apos;s candies have been a tremendous success in international markets. The authentic Indian fruit flavors, especially mango and lychee, are extremely popular in Europe and the Middle East.&quot;</p>
                                     </blockquote>
                                     <div className="text-amber-500 text-sm font-medium">Exported to 45+ countries</div>
                                 </div>
@@ -236,7 +236,7 @@ export default function Testimonials() {
                                         </svg>
                                     </div>
                                     <blockquote className="text-neutral-700 mb-6 flex-grow">
-                                        <p>"My review of Ashoka's fruit candy collection went viral! Readers were impressed by the commitment to natural ingredients and the true-to-life fruit flavors that set these candies apart."</p>
+                                        <p>&quot;My review of Ashoka&apos;s fruit candy collection went viral! Readers were impressed by the commitment to natural ingredients and the true-to-life fruit flavors that set these candies apart.&quot;</p>
                                     </blockquote>
                                     <div className="text-amber-500 text-sm font-medium">100K+ views on candy review</div>
                                 </div>

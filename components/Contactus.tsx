@@ -176,7 +176,7 @@ export const Contactus = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                 </svg>
                                 <h3 className="text-xl font-bold text-neutral-800 mb-2">Factory Location</h3>
-                                <p className="text-neutral-600 mb-4">Interactive map would load here. For privacy and security reasons, we're showing this placeholder.</p>
+                                <p className="text-neutral-600 mb-4">Interactive map would load here. For privacy and security reasons, we&apos;re showing this placeholder.</p>
                                 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition-colors duration-300 inline-flex items-center gap-2">
                                     <span>Open in Google Maps</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -207,7 +207,7 @@ export const Contactus = () => {
                     <h3 className="text-2xl font-bold text-amber-600 mb-4">Privacy Policy</h3>
 
                     <div className="text-neutral-700 space-y-4">
-                        <p>This Privacy Policy describes how Ashoka Candies and Rani Agrofood (collectively, "we," "us," or "our") collect, use, and share your personal information when you contact us through our website, by phone, or by email.</p>
+                        <p>This Privacy Policy describes how Ashoka Candies and Rani Agrofood (collectively, &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collect, use, and share your personal information when you contact us through our website, by phone, or by email.</p>
 
                         <h4 className="text-lg font-semibold text-neutral-800 mt-4">Information We Collect</h4>
                         <p>We may collect the following types of information:</p>

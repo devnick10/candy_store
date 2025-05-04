@@ -8,7 +8,7 @@ import Navbar from "./Navbar"
 import Process from "./Process"
 import { Products } from "./Products"
 import Testimonials from "./Testimonials"
-``
+
 export default function LandingPage() {
     return (
         <div className="relative w-full overflow-hidden">

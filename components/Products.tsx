@@ -194,7 +194,7 @@ export function Products() {
                                     <h3 className="text-xl font-bold text-pink-700">Watermelon Wonder</h3>
                                     <span className="bg-pink-100 text-pink-700 px-2 py-1 rounded text-sm">Tropical</span>
                                 </div>
-                                <p className="text-neutral-600 mb-4">Refreshing watermelon candies that capture summer's sweetness in every piece.</p>
+                                <p className="text-neutral-600 mb-4">Refreshing watermelon candies that capture summer&apos;s sweetness in every piece.</p>
                                 <div className="flex justify-between items-center">
                                     <span className="text-amber-500 font-bold">$4.99</span>
                                     <button className="view-product px-4 py-2 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition-colors duration-300" data-product="watermelon-wonder">View Details</button>

@@ -1,8 +1,8 @@
 "use client"
 import React, { useState } from 'react'
 import { X } from 'lucide-react'
-import Link from 'next/link'
 import { Button } from './ui/button'
+import Link from 'next/link';
 interface NavItems {
     title: string;
     hrf: string;
@@ -62,9 +62,10 @@ export default function Navbar() {
                         ))
                     }
                 </div>
-                <Button className='px-8 py-2 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition-colors duration-300'>
+                <Link href={"#contact"} className='px-8 py-2 bg-amber-500 text-white cursor-pointer rounded-full hover:bg-amber-600 transition-colors duration-300'>
                     Order Now
-                </Button>
+                </Link>
+
                 {/* Mobile Menu Button */}
                 <button
                     className="text-rose-900 md:hidden"
@@ -80,7 +81,7 @@ export default function Navbar() {
                             viewBox="0 0 24 24"
                             stroke="currentColor"
                         >
-                            <path strokeLinejoin="round"  strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            <path strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     )}
                 </button>

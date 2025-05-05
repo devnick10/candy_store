@@ -10,8 +10,10 @@ import { Products } from "./Products"
 import Testimonials from "./Testimonials"
 
 export default function LandingPage() {
+    // Add this temporary debug code to highlight clickable areas
+
     return (
-        <div className="relative w-full overflow-hidden">
+        <div  className="relative w-full overflow-hidden">
             <div className="fixed inset-0 -z-50 ">
                 <DotPattern
                     className="absolute inset-0 h-full w-full   [mask-image:radial-gradient(ellipse_at_center,white,transparent)]"
@@ -20,6 +22,8 @@ export default function LandingPage() {
                 />
 
             </div>
+
+
             {/* Navigation */}
             <Navbar />
 

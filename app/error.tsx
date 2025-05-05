@@ -1,6 +1,6 @@
 'use client'
 import { Button } from '@/components/ui/button'
-import React from 'react'
+import React, { startTransition } from 'react'
 
 interface ErrorProps {
   error: Error & { digest?: string }
@@ -13,8 +13,12 @@ export default function Error({ error, reset }: ErrorProps) {
       <div className='flex flex-col gap-4 text-center'>
         <h1 className='text-2xl font-bold'>Something went wrong</h1>
         <p className='text-red-500'>{error.message}</p>
-        <Button 
-          onClick={() => reset()}
+        <Button
+          onClick={() =>
+            startTransition(() => {
+              reset()
+            })
+          }
           className='bg-blue-600 hover:bg-blue-700 text-white'
         >
           Try Again

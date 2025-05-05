@@ -4,6 +4,7 @@ import {Nunito} from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from "next"
 import { data } from "@/lib/metadata"
+import { Toaster } from "@/components/ui/toaster"
 
 const nunito = Nunito({subsets:['latin']})
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Toaster/>
           {children}
         </ThemeProvider>
       </body>

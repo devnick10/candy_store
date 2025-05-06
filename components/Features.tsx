@@ -1,6 +1,27 @@
+"use client"
 
+import { IFeature } from "@/lib/utils";
+import { useState } from "react";
+import { featuresData } from "./FeatureData";
 
 export default function Features() {
+    const [activeTab, setActiveTab] = useState('ingredients');
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentFeature, setCurrentFeature] = useState<IFeature>();
+
+
+    const openFeatureModal = (featureId:string) => {
+        setCurrentFeature(featuresData[featureId]);
+        setIsModalOpen(true);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeFeatureModal = () => {
+        setIsModalOpen(false);
+        document.body.style.overflow = 'auto';
+    };
+
+
     return (
         <section id="features" className="py-16 md:py-24 bg-amber-50">
             <div className="container mx-auto px-4">
@@ -23,7 +44,7 @@ export default function Features() {
                         <div className="p-6">
                             <h3 className="text-xl font-bold text-amber-600 mb-3">100% Natural Ingredients</h3>
                             <p className="text-neutral-700">We source only the finest natural fruit extracts and ingredients, ensuring authentic flavors without artificial additives.</p>
-                            <button className="feature-info-btn mt-4 text-amber-500 hover:text-amber-600 transition-colors duration-300 inline-flex items-center gap-1" data-feature="natural-ingredients">
+                            <button onClick={()=>openFeatureModal("natural-ingredients")} className="feature-info-btn mt-4 text-amber-500 hover:text-amber-600 transition-colors duration-300 inline-flex items-center gap-1" data-feature="natural-ingredients">
                                 <span>Learn more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -43,7 +64,7 @@ export default function Features() {
                         <div className="p-6">
                             <h3 className="text-xl font-bold text-pink-600 mb-3">Sustainable Production</h3>
                             <p className="text-neutral-700">Our eco-friendly manufacturing process reduces waste and conserves energy, while supporting sustainable farming practices.</p>
-                            <button className="feature-info-btn mt-4 text-pink-500 hover:text-pink-600 transition-colors duration-300 inline-flex items-center gap-1" data-feature="sustainable-production">
+                            <button onClick={()=>openFeatureModal("sustainable-production")} className="feature-info-btn mt-4 text-pink-500 hover:text-pink-600 transition-colors duration-300 inline-flex items-center gap-1" data-feature="sustainable-production">
                                 <span>Learn more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -63,7 +84,7 @@ export default function Features() {
                         <div className="p-6">
                             <h3 className="text-xl font-bold text-green-600 mb-3">Quality Tested</h3>
                             <p className="text-neutral-700">Every batch undergoes rigorous quality testing to ensure consistency, flavor perfection, and highest safety standards.</p>
-                            <button className="feature-info-btn mt-4 text-green-500 hover:text-green-600 transition-colors duration-300 inline-flex items-center gap-1" data-feature="quality-tested">
+                            <button onClick={()=>openFeatureModal("quality-tested")} className="feature-info-btn mt-4 text-green-500 hover:text-green-600 transition-colors duration-300 inline-flex items-center gap-1" data-feature="quality-tested">
                                 <span>Learn more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -83,7 +104,7 @@ export default function Features() {
                         <div className="p-6">
                             <h3 className="text-xl font-bold text-blue-600 mb-3">Global Flavors</h3>
                             <p className="text-neutral-700">We draw inspiration from fruit varieties around the world, creating unique flavor profiles that delight the senses.</p>
-                            <button className="feature-info-btn mt-4 text-blue-500 hover:text-blue-600 transition-colors duration-300 inline-flex items-center gap-1" data-feature="global-flavors">
+                            <button onClick={()=>openFeatureModal("global-flavors")} className="feature-info-btn mt-4 text-blue-500 hover:text-blue-600 transition-colors duration-300 inline-flex items-center gap-1" data-feature="global-flavors">
                                 <span>Learn more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -103,7 +124,7 @@ export default function Features() {
                         <div className="p-6">
                             <h3 className="text-xl font-bold text-purple-600 mb-3">Artisanal Crafting</h3>
                             <p className="text-neutral-700">Our candy artisans combine traditional methods with modern techniques to create perfect texture and flavor balance.</p>
-                            <button className="feature-info-btn mt-4 text-purple-500 hover:text-purple-600 transition-colors duration-300 inline-flex items-center gap-1" data-feature="artisanal-crafting">
+                            <button onClick={()=>openFeatureModal("artisanal-crafting")} className="feature-info-btn mt-4 text-purple-500 hover:text-purple-600 transition-colors duration-300 inline-flex items-center gap-1" data-feature="artisanal-crafting">
                                 <span>Learn more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -123,7 +144,7 @@ export default function Features() {
                         <div className="p-6">
                             <h3 className="text-xl font-bold text-rose-600 mb-3">Giftable Packaging</h3>
                             <p className="text-neutral-700">Our beautiful, eco-friendly packaging makes Ashoka candies the perfect gift for any occasion, ready to delight recipients.</p>
-                            <button className="feature-info-btn mt-4 text-rose-500 hover:text-rose-600 transition-colors duration-300 inline-flex items-center gap-1" data-feature="giftable-packaging">
+                            <button onClick={()=>openFeatureModal("giftable-packaging")} className="feature-info-btn mt-4 text-rose-500 hover:text-rose-600 transition-colors duration-300 inline-flex items-center gap-1" data-feature="giftable-packaging">
                                 <span>Learn more</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -143,32 +164,47 @@ export default function Features() {
                             {/* Feature Tabs */}
                             <div className="feature-tabs mb-6">
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    <button className="feature-tab px-4 py-2 rounded-full bg-amber-500 text-white active" data-tab="ingredients">Ingredients</button>
-                                    <button className="feature-tab px-4 py-2 rounded-full bg-neutral-200 text-neutral-700" data-tab="process">Process</button>
-                                    <button className="feature-tab px-4 py-2 rounded-full bg-neutral-200 text-neutral-700" data-tab="packaging">Packaging</button>
+                                    <button
+                                        onClick={() => setActiveTab('ingredients')}
+                                        className={`px-4 py-2 rounded-full ${activeTab === 'ingredients' ? 'bg-amber-500 text-white' : 'bg-neutral-200 text-neutral-700'}`}
+                                    >
+                                        Ingredients
+                                    </button>
+                                    <button
+                                        onClick={() => setActiveTab('process')}
+                                        className={`px-4 py-2 rounded-full ${activeTab === 'process' ? 'bg-amber-500 text-white' : 'bg-neutral-200 text-neutral-700'}`}
+                                    >
+                                        Process
+                                    </button>
+                                    <button
+                                        onClick={() => setActiveTab('packaging')}
+                                        className={`px-4 py-2 rounded-full ${activeTab === 'packaging' ? 'bg-amber-500 text-white' : 'bg-neutral-200 text-neutral-700'}`}
+                                    >
+                                        Packaging
+                                    </button>
                                 </div>
 
                                 {/* Tab Content */}
                                 <div className="tab-content">
                                     {/* Ingredients Tab */}
-                                    <div id="ingredients-tab" className="tab-pane active">
+                                    <div className={`${activeTab === 'ingredients' ? 'block' : 'hidden'}`}>
                                         <p className="text-neutral-700 mb-4">We select only premium fruits at peak ripeness to extract the most vibrant flavors for our candies.</p>
                                         <ul className="space-y-2">
                                             <li className="flex items-start">
                                                 <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path strokeLinejoin="round"  strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                    <path strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
                                                 <span>Authentic fruit extracts</span>
                                             </li>
                                             <li className="flex items-start">
                                                 <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path strokeLinejoin="round"  strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                    <path strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
                                                 <span>No artificial colors or flavors</span>
                                             </li>
                                             <li className="flex items-start">
                                                 <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path strokeLinejoin="round"  strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                    <path strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
                                                 <span>Responsibly sourced sweeteners</span>
                                             </li>
@@ -176,18 +212,18 @@ export default function Features() {
                                     </div>
 
                                     {/* Process Tab */}
-                                    <div id="process-tab" className="tab-pane hidden">
+                                    <div className={`${activeTab === 'process' ? 'block' : 'hidden'}`}>
                                         <p className="text-neutral-700 mb-4">Our time-honored production process ensures consistent quality and perfect flavor in every piece.</p>
                                         <ul className="space-y-2">
                                             <li className="flex items-start">
                                                 <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path strokeLinejoin="round"  strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                    <path strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
                                                 <span>Small batch production</span>
                                             </li>
                                             <li className="flex items-start">
                                                 <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path strokeLinejoin="round"  strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                    <path strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
                                                 <span>Traditional copper kettles</span>
                                             </li>
@@ -201,24 +237,24 @@ export default function Features() {
                                     </div>
 
                                     {/* Packaging Tab */}
-                                    <div id="packaging-tab" className="tab-pane hidden">
+                                    <div className={`${activeTab === 'packaging' ? 'block' : 'hidden'}`}>
                                         <p className="text-neutral-700 mb-4">Our packaging is designed to preserve freshness while minimizing environmental impact.</p>
                                         <ul className="space-y-2">
                                             <li className="flex items-start">
                                                 <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path strokeLinejoin="round"  strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                    <path strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
                                                 <span>Biodegradable materials</span>
                                             </li>
                                             <li className="flex items-start">
                                                 <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path strokeLinejoin="round"  strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                    <path strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
                                                 <span>Moisture-resistant sealing</span>
                                             </li>
                                             <li className="flex items-start">
                                                 <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path strokeLinejoin="round"  strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                    <path strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
                                                 <span>Gift-ready presentation</span>
                                             </li>
@@ -259,31 +295,49 @@ export default function Features() {
             </div>
 
             {/* Feature Info Modal */}
-            {/* TODO:ADD ON CLICK flex default hidden on feature modl */}
-            <div id="feature-modal" className="fixed inset-0 z-50 items-center justify-center hidden opacity-0 transition-opacity duration-300" aria-modal="true" aria-hidden="true">
-                {/* Modal backdrop */}
-                <div id="feature-modal-backdrop" className="absolute inset-0 bg-black bg-opacity-50 transition-opacity"></div>
+            {isModalOpen && currentFeature && (
+                <div
+                    id="feature-modal"
+                    className="fixed inset-0 z-50 flex items-center justify-center opacity-100 transition-opacity duration-300"
+                    aria-modal="true"
+                    aria-hidden={!isModalOpen}
+                >
+                    {/* Modal backdrop */}
+                    <div
+                        id="feature-modal-backdrop"
+                        className="absolute inset-0 bg-black bg-opacity-50 transition-opacity"
+                        onClick={closeFeatureModal}
+                    ></div>
 
-                {/* Modal content */}
-                <div className="relative bg-white rounded-xl max-w-md mx-4 p-6 md:p-8 shadow-2xl transform transition-all scale-95 opacity-0" id="feature-modal-content">
-                    <button id="close-feature-modal" className="absolute top-4 right-4 text-neutral-500 hover:text-neutral-800 focus:outline-none" aria-label="Close modal">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinejoin="round"  strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
+                    {/* Modal content */}
+                    <div
+                        className={`relative bg-white rounded-xl max-w-md mx-4 p-6 md:p-8 shadow-2xl transform transition-all scale-100 opacity-100 ${currentFeature.color}`}
+                        id="feature-modal-content"
+                    >
+                        <button
+                            id="close-feature-modal"
+                            className="absolute top-4 right-4 text-neutral-500 hover:text-neutral-800 focus:outline-none"
+                            aria-label="Close modal"
+                            onClick={closeFeatureModal}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
 
-                    <div className="text-center mb-6">
-                        <div className="mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4" id="feature-modal-icon-bg">
-                            <span className="text-3xl" id="feature-modal-icon">🍎</span>
+                        <div className="text-center mb-6">
+                            <div className={`mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4 ${currentFeature.color}`}>
+                                <span className="text-3xl">{currentFeature.icon}</span>
+                            </div>
+                            <h3 className="text-2xl font-bold mb-2">{currentFeature.title}</h3>
                         </div>
-                        <h3 className="text-2xl font-bold mb-2" id="feature-modal-title">Feature Title</h3>
-                    </div>
 
-                    <div className="prose text-neutral-700" id="feature-modal-description">
-                        <p>Feature description goes here.</p>
+                        <div className="prose text-neutral-700">
+                            {currentFeature.description}
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
         </section>
     )
 }

@@ -96,7 +96,7 @@ export default function ProductDetail({
                     </div>
                   </div>
                 </div>
-                 {/* TEMP: commited */}
+                 {/* TEMP: commited Card options */}
                 {/* <div className="flex flex-col sm:flex-row gap-4">
                   <div className="flex border rounded-full overflow-hidden">
                     <button 

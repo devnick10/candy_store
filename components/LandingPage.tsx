@@ -10,7 +10,6 @@ import { Products } from "./Products"
 import Testimonials from "./Testimonials"
 
 export default function LandingPage() {
-    // Add this temporary debug code to highlight clickable areas
 
     return (
         <div  className="relative w-full overflow-hidden">
@@ -54,6 +53,3 @@ export default function LandingPage() {
     )
 }
 
-
-
-// Features data with JSX icons

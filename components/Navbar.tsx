@@ -62,7 +62,7 @@ export default function Navbar() {
                         ))
                     }
                 </div>
-                <Link href={"#contact"} className='px-8 py-2 bg-amber-500 text-white cursor-pointer rounded-full hover:bg-amber-600 transition-colors duration-300'>
+                <Link href={"#contact"} className='px-8 py-2 hidden md:flex bg-amber-500 text-white cursor-pointer rounded-full hover:bg-amber-600 transition-colors duration-300'>
                     Order Now
                 </Link>
 

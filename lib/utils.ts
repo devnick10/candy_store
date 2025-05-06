@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx"
-import { Candy, Cherry, IceCream } from "lucide-react";
-import React from "react";
+import { Candy, Cherry, IceCream, Key } from "lucide-react";
+import React, { JSX } from "react";
 import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
@@ -30,6 +30,23 @@ export interface IFormData {
     message: string;
 }
 
+
+export interface IFeature{
+  title:string;
+  icon:string;
+  color:string;
+  description:JSX.Element
+}
+
+export interface IFeaturesData {
+  [key: string]: IFeature;
+}
+
+interface NavItems {
+  title: string;
+  hrf: string;
+}
+
 export const features: Features[] = [
   {
     title: "Real Fruit Flavors",
@@ -47,11 +64,6 @@ export const features: Features[] = [
     icon: IceCream,
   },
 ]
-
-interface NavItems {
-  title: string;
-  hrf: string;
-}
 
 export const navItems:NavItems[] = [
   {

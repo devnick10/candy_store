@@ -160,10 +160,10 @@ export default function ContactForm() {
                     </div>
 
                     {/* CATPCHA */}
-                    <ReCAPTCHA
-                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                        onChange={handleRecaptchaChange}
-                    />
+                        <ReCAPTCHA className='w-full relative'
+                            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                            onChange={handleRecaptchaChange}
+                        />
 
                     <div>
                         <button type="submit" className="w-full md:w-auto px-8 py-3 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition-colors duration-300 flex items-center justify-center gap-2">

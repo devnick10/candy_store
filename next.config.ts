@@ -13,10 +13,6 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   trailingSlash: false,
 
-  metadata: {
-    metadataBase: new URL('https://www.raniagrofood.com'),
-  },
-
   async headers() {
     return [
       {
@@ -38,13 +34,9 @@ const nextConfig = {
       },
     ]
   },
-
   images: {
-    domains: ['www.raniagrofood.com'],
-    formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 86400,
+    remotePatterns: [new URL('https://www.raniagrofood.com')],
   },
-
   async redirects() {
     return [
       {

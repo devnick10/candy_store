@@ -1,60 +1,70 @@
 "use client"
 import React, { useState } from 'react'
-import { Button } from './ui/button'
-import Link from 'next/link'
 import { X } from 'lucide-react'
-import Image from 'next/image'
-
-export const Navbar = () => {
+import { Button } from './ui/button'
+import Link from 'next/link';
+interface NavItems {
+    title: string;
+    hrf: string;
+}
+const navItems: NavItems[] = [
+    {
+        title: "Home",
+        hrf: "#home"
+    },
+    {
+        title: "About",
+        hrf: "#about"
+    },
+    {
+        title: "Products",
+        hrf: "#products"
+    },
+    {
+        title: "Features",
+        hrf: "#features"
+    },
+    {
+        title: "Process",
+        hrf: "#process"
+    },
+    {
+        title: "Testimonials",
+        hrf: "#testimonials"
+    },
+    {
+        title: "Contact",
+        hrf: "#contact"
+    }
+]
+export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
     return (
-        <nav className="fixed top-0 z-50 w-full bg-pink-50/90 backdrop-blur-sm border-b border-rose-200">
-            <div className="container mx-auto flex h-16 items-center justify-between px-4">
+        <nav className="fixed top-0 z-50 w-full  backdrop-blur-sm border-b ">
+            <div className="px-4 mx-auto flex h-16 items-center justify-between  ">
                 <div className="flex items-center">
-                    <span className="font-serif text-2xl font-bold text-rose-900 flex items-center">
-                        <Image
-                            src={"/Ashoka-logo.jpg"}
-                            width={50}
-                            height={50}
-                            alt='logo'
-                        />
-                        ASHOKA
+                    <span className="font-nunito text-2xl font-bold text-amber-500 flex items-center">
+                        Ashoka
                     </span>
                 </div>
 
                 {/* Desktop Navigation */}
                 <div className="hidden space-x-8 md:flex">
-                    <Link
-                        href="#products"
-                        className="text-sm font-medium text-rose-900 hover:text-fuchsia-600 transition-colors"
-                    >
-                        Flavors
-                    </Link>
-                    <Link
-                        href="#about"
-                        className="text-sm font-medium text-rose-900 hover:text-fuchsia-600 transition-colors"
-                    >
-                        Our Story
-                    </Link>
-                    <Link
-                        href="#features"
-                        className="text-sm font-medium text-rose-900 hover:text-fuchsia-600 transition-colors"
-                    >
-                        Why Us
-                    </Link>
-                    <Link
-                        href="#contact"
-                        className="text-sm font-medium text-rose-900 hover:text-fuchsia-600 transition-colors"
-                    >
-                        Contact
-                    </Link>
+                    {
+                        navItems.map((items, index) => (
+                            <Link
+                                key={index}
+                                href={items.hrf}
+                                className="font-Quicksand text-neutral-700 hover:text-amber-500 transition-colors duration-300"
+                            >
+                                {items.title}
+                            </Link>
+                        ))
+                    }
                 </div>
-                  <Link href={"#contact"}>
-                <Button  className="hidden bg-fuchsia-600 text-white hover:bg-rose-700 md:inline-flex">
-                    Contact Us
-                </Button>
-                  </Link>
+                <Link href={"#contact"} className='px-8 py-2 hidden md:flex bg-amber-500 text-white cursor-pointer rounded-full hover:bg-amber-600 transition-colors duration-300'>
+                    Order Now
+                </Link>
 
                 {/* Mobile Menu Button */}
                 <button
@@ -71,7 +81,7 @@ export const Navbar = () => {
                             viewBox="0 0 24 24"
                             stroke="currentColor"
                         >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            <path strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     )}
                 </button>
@@ -81,37 +91,21 @@ export const Navbar = () => {
             {mobileMenuOpen && (
                 <div className="md:hidden bg-white shadow-lg">
                     <div className="container mx-auto px-4 py-3 space-y-4">
-                        <Link
-                            href="#products"
-                            className="block py-2 text-sm font-medium text-rose-900 hover:text-fuchsia-600"
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
-                            Flavors
-                        </Link>
-                        <Link
-                            href="#about"
-                            className="block py-2 text-sm font-medium text-rose-900 hover:text-fuchsia-600"
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
-                            Our Story
-                        </Link>
-                        <Link
-                            href="#features"
-                            className="block py-2 text-sm font-medium text-rose-900 hover:text-fuchsia-600"
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
-                            Why Us
-                        </Link>
-                        <Link
-                            href="#contact"
-                            className="block py-2 text-sm font-medium text-rose-900 hover:text-fuchsia-600"
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
-                            Contact
-                        </Link>
-                        {/* <Button className="w-full bg-fuchsia-600 text-white hover:bg-rose-700 mt-2">
+                        {
+                            navItems.map((items, index) => (
+                                <Link
+                                    key={index}
+                                    href={items.hrf}
+                                    className="block py-2 text-sm font-medium text-rose-900 hover:text-fuchsia-600"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    {items.title}
+                                </Link>
+                            ))
+                        }
+                        <Button className="w-full bg-amber-500 text-white  mt-2">
                             Order Now
-                        </Button> */}
+                        </Button>
                     </div>
                 </div>
             )}

@@ -1,135 +1,63 @@
-import React from 'react'
-import { Button } from './ui/button'
-import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
+"use client"
+import ContactForm from "./ContactForm";
+import ContactInfo from "./ContactInfo";
 
 export const Contactus = () => {
-  return (
-                    <section id="contact" className="py-24 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="mb-16 text-center">
-                        <span className="mb-2 inline-block rounded-full bg-rose-200 px-4 py-1 text-xs font-semibold text-rose-800">
-                            GET IN TOUCH
-                        </span>
-                        <h2 className="font-serif text-3xl font-bold text-rose-900 md:text-4xl lg:text-5xl">Contact Us</h2>
-                        <div className="mx-auto mt-4 h-1 w-20 bg-fuchsia-600"></div>
-                    </div>
+    return (
+        <section id="contact" className="py-16 md:py-24">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold text-amber-600 mb-4">Contact</h2>
+                    <div className="w-24 h-1 bg-amber-500 mx-auto mb-8 rounded-full"></div>
+                    <p className="text-lg text-neutral-700 max-w-3xl mx-auto">Get in touch with us for orders, inquiries, or to learn more about our sweet fruity candies.</p>
+                </div>
 
-                    <div className="grid gap-8 rounded-2xl bg-gradient-to-br from-white to-rose-50 p-8 shadow-xl md:grid-cols-2">
-                        <div>
-                            <h3 className="mb-6 font-serif text-2xl font-semibold text-rose-900">Sweet Conversations</h3>
-                            <div className="space-y-6">
-                                <div className="flex items-start">
-                                    <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-rose-200 text-rose-800">
-                                        <Mail className="h-5 w-5" />
-                                    </div>
-                                    <div>
-                                        <p className="font-medium text-rose-900">Email</p>
-                                        <a href="mailto:raniagrofood@gmail.com" className="text-fuchsia-600 hover:underline">
-                                            {process.env.NEXT_PUBLIC_CONTACT_EMAIL}
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="flex items-start">
-                                    <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-rose-200 text-rose-800">
-                                        <Phone className="h-5 w-5" />
-                                    </div>
-                                    <div>
-                                        <p className="font-medium text-rose-900">Phone</p>
-                                    <p className="text-rose-900/70">+91 {process.env.NEXT_PUBLIC_CONTACT_NUMBER}</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start">
-                                    <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-rose-200 text-rose-800">
-                                        <MapPin className="h-5 w-5" />
-                                    </div>
-                                    <div>
-                                        <p className="font-medium text-rose-900">Address</p>
-                                        <p className="text-rose-900/70">
-                                            Dhanoli Road, Darbada
-                                            <br />
-                                            Taluka Salekasa District Gondia, 441916
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                <div className="grid grid-cols-1  lg:grid-cols-2 gap-12 items-stretch ">
+                    {/* Contact Information */}
+                    <ContactInfo />
 
-                            <div className="mt-8 rounded-lg bg-rose-200/30 p-6">
-                                <h4 className="mb-4 font-serif text-lg font-semibold text-rose-900">Sweet Hours</h4>
-                                <ul className="space-y-2 text-rose-900/70">
-                                    <li className="flex justify-between">
-                                        <span>Monday - Friday:</span>
-                                        <span>9:00 AM - 6:00 PM</span>
-                                    </li>
-                                    <li className="flex justify-between">
-                                        <span>Saturday:</span>
-                                        <span>10:00 AM - 4:00 PM</span>
-                                    </li>
-                                    <li className="flex justify-between">
-                                        <span>Sunday:</span>
-                                        <span>Eating candy (closed)</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    {/* Contact Form */}
+                    <ContactForm />
+                </div>
 
-                        <div>
-                            <h3 className="mb-6 font-serif text-2xl font-semibold text-rose-900">Send Us a Sweet Note</h3>
-                            <form className="space-y-4" method="POST" action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_FORM_RECEIVED_EMAIL}`}>
-                                <div>
-                                    <label htmlFor="name" className="mb-1 block text-sm font-medium text-rose-900">
-                                        Your Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        className="w-full rounded-lg border border-rose-300 bg-white/50 p-3 focus:border-fuchsia-600 focus:outline-none focus:ring-1 focus:ring-fuchsia-600"
-                                        placeholder="Sweet tooth name"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="email" className="mb-1 block text-sm font-medium text-rose-900">
-                                        Email Address
-                                    </label>
-                                    <input
-                                        name='email'
-                                        type="email"
-                                        id="email"
-                                        className="w-full rounded-lg border border-rose-300 bg-white/50 p-3 focus:border-fuchsia-600 focus:outline-none focus:ring-1 focus:ring-fuchsia-600"
-                                        placeholder="your@email.com"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="subject" className="mb-1 block text-sm font-medium text-rose-900">
-                                        Subject
-                                    </label>
-                                    <input
-                                        name='subject'
-                                        type="text"
-                                        id="subject"
-                                        className="w-full rounded-lg border border-rose-300 bg-white/50 p-3 focus:border-fuchsia-600 focus:outline-none focus:ring-1 focus:ring-fuchsia-600"
-                                        placeholder="Sweet question or comment"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="message" className="mb-1 block text-sm font-medium text-rose-900">
-                                        Message
-                                    </label>
-                                    <textarea
-                                        name='message'
-                                        id="message"
-                                        rows={4}
-                                        className="w-full rounded-lg border border-rose-300 bg-white/50 p-3 focus:border-fuchsia-600 focus:outline-none focus:ring-1 focus:ring-fuchsia-600"
-                                        placeholder="Your sweet message..."
-                                    ></textarea>
-                                </div>
-                                <input type="hidden" name="_next" value={`${process.env.NEXT_PUBLIC_FORM_REDIRECT_URL}/thanks`} />
-                                <Button type='submit' className="w-full bg-fuchsia-600 text-white hover:bg-rose-700">
-                                    Send Message <ArrowRight className="ml-2 h-4 w-4" />
-                                </Button>
-                            </form>
+                {/* Map Section */}
+                <div className="mt-16">
+                    <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                        {/* Replace the placeholder div with your iframe */}
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.712518997923!2d80.43879419303751!3d21.31149595493655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2bb9000be1efa3%3A0xbc20fc855a277941!2sRANI%20AGRO%20FOOD!5e0!3m2!1sen!2sin!4v1746518123804!5m2!1sen!2sin"
+                            width="100%"
+                            height="400"
+                            className="border-0"
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+
+                        {/* Keep your existing location information below the map */}
+                        <div className="p-6 text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto text-amber-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <h3 className="text-xl font-bold text-neutral-800 mb-2">Factory Location</h3>
+                            <p className="text-neutral-600 mb-4">RANI AGRO FOOD, Dhanoli Road Darbada Th Salekasa , 441916 MH</p>
+                            <a
+                                href="https://www.google.com/maps?q=21.311496,80.440369"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-4 py-2 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition-colors duration-300 inline-flex items-center gap-2"
+                            >
+                                <span>Open in Google Maps</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </section>
-  )
+            </div>
+        </section>
+    )
 }

@@ -1,6 +1,13 @@
 "use client"
-import ContactForm from "./ContactForm";
+// import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
+import dynamic from 'next/dynamic';
+
+const ContactForm = dynamic(() => import('./ContactForm'), {
+  ssr: false,
+  loading: () => <div>Loading form...</div>,
+});
+
 
 export const Contactus = () => {
     return (
@@ -15,7 +22,6 @@ export const Contactus = () => {
                 <div className="grid grid-cols-1  lg:grid-cols-2 gap-12 items-stretch ">
                     {/* Contact Information */}
                     <ContactInfo />
-
                     {/* Contact Form */}
                     <ContactForm />
                 </div>

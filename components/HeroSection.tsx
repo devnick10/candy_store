@@ -2,13 +2,14 @@ import Link from "next/link";
 
 export default function HeroSection() {
     return (
-        <section id="hero" className="min-h-screen relative overflow-hidden pt-24 pb-16">
+        <section id="hero" className="relative overflow-hidden pt-28 pb-24 ">
+
             <div className="absolute inset-0 overflow-hidden">
                 <div className="candy-circle animate-float-slow bg-amber-100 rounded-full w-32 h-32 absolute top-1/4 left-1/4 opacity-30"></div>
                 <div className="candy-circle animate-float bg-red-100 rounded-full w-48 h-48 absolute bottom-1/3 right-1/4 opacity-30"></div>
                 <div className="candy-circle animate-float-slow-reverse bg-yellow-100 rounded-full w-40 h-40 absolute bottom-1/4 left-1/3 opacity-30"></div>
             </div>
-            <div className="container  mx-auto px-4 relative z-10 ">
+            <div className="container  mx-auto px-4 py-1 relative z-10 ">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
                     <div className="w-full md:w-1/2 pt-4 md:pt-10 transition-all duration-700 opacity-100 translate-y-0">
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-600 mb-4 tracking-tight leading-tight">Delightful <span className="text-pink-500">Fruity</span> Treats
@@ -40,7 +41,7 @@ export default function HeroSection() {
                     <div className="w-full md:w-1/2 relative transition-all duration-700 opacity-100 translate-y-0" data-aos="fade-left">
                         <div className="relative candy-animation">
                             {/* <!-- Main candy image --> */}
-                            <div className="candy-main transform transition-transform hover:rotate-3 hover:scale-105 duration-500" style={{transform:` perspective(1000px) rotateX(0deg) rotateY(0deg)`}}>
+                            <div className="candy-main transform transition-transform hover:rotate-3 hover:scale-105 duration-500" style={{ transform: ` perspective(1000px) rotateX(0deg) rotateY(0deg)` }}>
                                 <div className="w-full h-full max-w-lg mx-auto rounded-2xl overflow-hidden shadow-xl">
                                     {/* <!-- No actual image available, using colored div --> */}
                                     <div className="w-full h-96 bg-gradient-to-br from-amber-200 via-pink-200 to-yellow-200 rounded-2xl flex items-center justify-center">

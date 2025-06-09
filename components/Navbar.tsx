@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { X } from 'lucide-react'
 import { Button } from './ui/button'
 import Link from 'next/link';
+import Image from 'next/image';
 interface NavItems {
     title: string;
     hrf: string;
@@ -43,6 +44,12 @@ export default function Navbar() {
         <nav className="fixed top-0 z-50 w-full  backdrop-blur-sm border-b ">
             <div className="px-4 mx-auto flex h-16 items-center justify-between  ">
                 <div className="flex items-center">
+                    <Image
+                      alt='logo'
+                      height={60}
+                      width={60}
+                      src={'/Ashoka-logo.jpg'}
+                    />
                     <span className="font-nunito text-2xl font-bold text-amber-500 flex items-center">
                         Ashoka
                     </span>

@@ -1,41 +1,39 @@
-import { clsx, type ClassValue } from "clsx"
-import { Candy, Cherry, IceCream, Key } from "lucide-react";
-import React, { JSX } from "react";
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from 'clsx';
+import { Candy, Cherry, IceCream, Key } from 'lucide-react';
+import React, { JSX } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
 interface Features {
   title: string;
   description: string;
-  icon: React.ComponentType<{ className?: string }>
+  icon: React.ComponentType<{ className?: string }>;
 }
 
 export type Subject =
-    | "General Inquiry"
-    | "Distributor Inquiry"
-    | "Bulk Order"
-    | "Product Feedback"
-    | "Customer Support"
-    | "Other";
-
+  | 'General Inquiry'
+  | 'Distributor Inquiry'
+  | 'Bulk Order'
+  | 'Product Feedback'
+  | 'Customer Support'
+  | 'Other';
 
 export interface IFormData {
-    fullname: string;
-    email: string;
-    subject: Subject;
-    phone: string;
-    message: string;
+  fullname: string;
+  email: string;
+  subject: Subject;
+  phone: string;
+  message: string;
 }
 
-
-export interface IFeature{
-  title:string;
-  icon:string;
-  color:string;
-  description:JSX.Element
+export interface IFeature {
+  title: string;
+  icon: string;
+  color: string;
+  description: JSX.Element;
 }
 
 export interface IFeaturesData {
@@ -49,55 +47,58 @@ interface NavItems {
 
 export const features: Features[] = [
   {
-    title: "Real Fruit Flavors",
-    description: "We use natural fruit extracts for authentic taste that candy lovers can feel good about.",
+    title: 'Real Fruit Flavors',
+    description:
+      'We use natural fruit extracts for authentic taste that candy lovers can feel good about.',
     icon: Cherry,
   },
   {
-    title: "Small Batch Crafted",
-    description: "Every piece is made with care in small batches for consistent quality and flavor.",
+    title: 'Small Batch Crafted',
+    description:
+      'Every piece is made with care in small batches for consistent quality and flavor.',
     icon: Candy,
   },
   {
-    title: "Vibrant Colors",
-    description: "Our candies get their beautiful hues from natural sources, never artificial dyes.",
+    title: 'Vibrant Colors',
+    description:
+      'Our candies get their beautiful hues from natural sources, never artificial dyes.',
     icon: IceCream,
   },
-]
+];
 
-export const navItems:NavItems[] = [
+export const navItems: NavItems[] = [
   {
-      title: "Home",
-      hrf: "#home"
+    title: 'Home',
+    hrf: '#home',
   },
   {
-      title: "About",
-      hrf: "#about"
+    title: 'About',
+    hrf: '#about',
   },
   {
-      title: "Products",
-      hrf: "#products"
+    title: 'Products',
+    hrf: '#products',
   },
   {
-      title: "Features",
-      hrf: "#features"
+    title: 'Features',
+    hrf: '#features',
   },
   {
-      title: "Process",
-      hrf: "#process"
+    title: 'Process',
+    hrf: '#process',
   },
   {
-      title: "Testimonials",
-      hrf: "#testimonials"
+    title: 'Testimonials',
+    hrf: '#testimonials',
   },
   {
-      title: "Contact",
-      hrf: "#contact"
+    title: 'Contact',
+    hrf: '#contact',
   },
-]
+];
 
-export function emailTemplate({email,subject,phone,message,fullname}:IFormData){
-return `
+export function emailTemplate({ email, subject, phone, message, fullname }: IFormData) {
+  return `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -192,5 +193,5 @@ return `
       </div>
     </body>
     </html>
-  `
+  `;
 }

@@ -1,11 +1,11 @@
-// next.config.js
+import withPWA from 'next-pwa';
 
-const withPWA = require('next-pwa')({
+const withPWAConfig = withPWA({
   dest: 'public',
   register: true,
   skipWaiting: true,
   disable: process.env.NODE_ENV === 'development',
-})
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -32,10 +32,16 @@ const nextConfig = {
           },
         ],
       },
-    ]
+    ];
   },
   images: {
-    remotePatterns: [new URL('https://www.raniagrofood.com')],
+    remotePatterns: [
+      {
+        protocol: 'https' as const,
+        hostname: 'res.cloudinary.com',
+        pathname: '**',
+      },
+    ],
   },
   async redirects() {
     return [
@@ -44,8 +50,8 @@ const nextConfig = {
         destination: '/#products',
         permanent: true,
       },
-    ]
+    ];
   },
-}
+};
 
-module.exports = withPWA(nextConfig)
+module.exports = withPWAConfig(nextConfig);

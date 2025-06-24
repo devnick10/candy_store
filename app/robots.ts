@@ -3,15 +3,9 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: ['/', '/favicon.ico'],
-      disallow: [
-        '/private/',
-        '/admin/',
-        '/dashboard/',
-        '/api/',
-        '/test/'
-      ],
+      disallow: ['/private/', '/admin/', '/dashboard/', '/api/', '/test/'],
     },
     sitemap: 'https://www.raniagrofood.com/sitemap.xml',
-    host: 'https://www.raniagrofood.com'
-  }
+    host: 'https://www.raniagrofood.com',
+  };
 }

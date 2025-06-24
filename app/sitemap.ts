@@ -1,5 +1,5 @@
 // app/sitemap.ts
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -7,6 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://www.raniagrofood.com',
       lastModified: new Date(),
       priority: 1,
-    }
-  ]
+    },
+  ];
 }

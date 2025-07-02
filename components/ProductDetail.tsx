@@ -33,7 +33,7 @@ export default function ProductDetail({
           <div className="relative mx-4 max-h-[90vh] max-w-4xl transform overflow-auto rounded-xl bg-white shadow-2xl transition-all">
             <button
               id="close-product-modal"
-              className="absolute right-4 top-4 z-10 text-neutral-500 hover:text-neutral-800 focus:outline-none"
+              className="absolute right-4 top-6 z-10 text-neutral-500 hover:text-neutral-800 focus:outline-none"
               aria-label="Close modal"
               onClick={closeProductModal}
             >
@@ -49,20 +49,14 @@ export default function ProductDetail({
             </button>
 
             <div className="flex flex-col md:flex-row">
-              <div
-                className={`w-full bg-gradient-to-br p-6 md:w-1/2 md:p-8 ${selectedProduct.colorClass}`}
-              >
-                <div className="flex h-64 w-full items-center justify-center md:h-80">
-                  <div
-                    className={`relative flex h-48 w-48 items-center justify-center overflow-hidden rounded-full shadow-lg md:h-64 md:w-64 ${selectedProduct.bgColor}`}
-                  >
-                    <Image
-                      alt="productimage"
-                      src={selectedProduct.image}
-                      fill
-                      className="rounded-full"
-                    />
-                  </div>
+              <div className={`w-full md:w-1/2 bg-gradient-to-br p-6 md:p-8 ${selectedProduct.colorClass}`}>
+                <div className={`relative rounded-md w-full h-60 md:h-full flex-1 overflow-hidden shadow-lg ${selectedProduct.bgColor}`}>
+                  <Image
+                    alt="productimage"
+                    src={selectedProduct.image}
+                    fill
+                    className="object-cover rounded-md"
+                  />
                 </div>
               </div>
 

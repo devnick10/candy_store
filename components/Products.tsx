@@ -87,16 +87,16 @@ export function Products() {
                 <div
                   className={`h-64 bg-gradient-to-br ${product.colorClass} relative flex items-center justify-center overflow-hidden p-6`}
                 >
-                  <div className="relative z-10 flex h-full w-full items-center justify-center">
-                    <div
-                      className={`h-40 w-40 rounded-full ${product.bgColor} flex transform items-center justify-center shadow-inner transition-transform duration-500 group-hover:scale-110`}
-                    >
-                      <Image alt="productimage" src={product.image} fill className="rounded-full" />
-                    </div>
-                  </div>
+                  {/* <div className="relative z-10 flex h-full w-full items-center justify-center"> */}
+                    {/* <div
+                      className={`h-60 w-60 rounded-full ${product.bgColor} flex transform items-center justify-center shadow-inner transition-transform duration-500 group-hover:scale-110`}
+                    > */}
+                      <Image alt="productimage" src={product.image} fill className="" />
+                    {/* </div> */}
+                  {/* </div> */}
                   {/* Background elements */}
-                  <div className="absolute left-0 top-0 h-20 w-20 -translate-x-6 -translate-y-6 rounded-full bg-yellow-200 opacity-40"></div>
-                  <div className="absolute bottom-0 right-0 h-32 w-32 translate-x-10 translate-y-10 rounded-full bg-amber-200 opacity-60"></div>
+                  {/* <div className="absolute left-0 top-0 h-20 w-20 -translate-x-6 -translate-y-6 rounded-full bg-yellow-200 opacity-40"></div>
+                  <div className="absolute bottom-0 right-0 h-32 w-32 translate-x-10 translate-y-10 rounded-full bg-amber-200 opacity-60"></div> */}
                 </div>
                 <div className="p-6">
                   <div className="mb-2 flex items-start justify-between">
